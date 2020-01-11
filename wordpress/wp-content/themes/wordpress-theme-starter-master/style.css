@@ -118,7 +118,7 @@ html {
 }
 
 .home {
-  background-color: #2A2A2A;
+  background-color: #000;
   font-family: "Roboto", serif;
 }
 .home h1 {
@@ -193,6 +193,9 @@ html {
   font-family: "Oswald", serif;
   letter-spacing: 0.05rem;
 }
+.home .post-info ul li {
+  list-style-type: none;
+}
 .home .byline-author a {
   color: #999999;
 }
@@ -215,6 +218,15 @@ html {
 }
 .home ul {
   padding-inline-start: unset;
+}
+.home .profile-picture {
+  width: 100px;
+}
+.home article {
+  background-color: #2A2A2A;
+  margin-bottom: 25px;
+  display: inline;
+  color: pi;
 }
 
 /*# sourceMappingURL=style.css.map */

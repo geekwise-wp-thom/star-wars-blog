@@ -1,6 +1,7 @@
 .home {
-  background-color: #2A2A2A;
+  background-color: #000;
   font-family: $font;
+
   h1 {
     margin-bottom: 0px;
   }
@@ -15,7 +16,6 @@
     border-top: 13px solid #131313;
     border-bottom: 13px solid #131313;
   }
-
   #trapezoid {
     border-bottom: 10px solid #131313;
     border-left: 10px solid transparent;
@@ -75,6 +75,11 @@
     text-transform: uppercase;
     font-family: $byline;
     letter-spacing: .05rem;
+    ul {
+      li {
+        list-style-type: none;
+      }
+    }
   }
   .byline-author {
     a {
@@ -103,5 +108,13 @@
   }
   ul {
     padding-inline-start: unset;
+  }
+  .profile-picture {
+    width: 100px;
+  }
+  article {
+    background-color: #2A2A2A;
+    margin-bottom: 25px;
+    display: inline;
   }
 }
