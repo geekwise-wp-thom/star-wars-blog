@@ -20,31 +20,32 @@
     <!-- /post thumbnail --> 
 
 	<div class="pt-2 pl-2">
-      <!-- post title -->
-      <h2 class="title">
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-      </h2>
-      <!-- /post title -->
+    <!-- post title -->
+    <h2 class="title">
+      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+    </h2>
+    <!-- /post title -->
 
-      <div class="text">
-        <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+    <div class="text">
+      <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+    </div>
+  </div>  
+    <div class="m-0 py-0 row">
+      <!-- post details -->
+      <div class="col-10 col-lg-11">
+        <span class="post-info byline-author"><?php _e( 'By:', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>      
+        <div class="post-info byline-date d-flex">
+          <?php the_category();?>&nbsp// <?php the_time('F j, Y'); ?>
+        </div>
       </div>
-    </div>  
-    <div class="d-flex align-items-center m-0 py-0 row">
-	  <!-- post details -->
-	  <div class="col-10 col-md-10 col-lg-11">
-		<span class="post-info byline-author"><?php _e( 'By:', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>      
-		<div class="post-info byline-date d-flex">
-			<?php the_category();?>&nbsp// <?php the_time('F j, Y'); ?>
-		</div>
+      <!-- /post details -->   
+      <!-- Code to use the Advanced Custom Field image -->
+        <?php if( get_field('profile_picture') ): ?>
+        <img class="profile-picture p-0 col-2 col-lg-1" src="<?php the_field('profile_picture'); ?>" />
+      <?php endif; ?>    
 	  </div>
-	  <!-- /post details -->   
-	  <!-- Code to use the Advanced Custom Field image -->
-      <?php if( get_field('profile_picture') ): ?>
-			<img class="profile-picture p-0 col-2  col-md-2 col-lg-1" src="<?php the_field('profile_picture'); ?>" />
-	  <?php endif; ?>    
-	</div>
-  </article><?php endwhile; ?><?php else: ?>  
+  </article>
+  <?php endwhile; ?><?php else: ?>  
 	<!-- /article -->
 	<!-- article -->
   <article>

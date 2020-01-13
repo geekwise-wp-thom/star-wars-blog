@@ -193,7 +193,7 @@ html {
   font-family: "Oswald", serif;
   letter-spacing: 0.05rem;
 }
-.home .post-info ul li {
+.home .post-info ul{
   list-style-type: none;
 }
 .home .byline-author a {
@@ -225,8 +225,6 @@ html {
 .home article {
   background-color: #2A2A2A;
   margin-bottom: 25px;
-  display: inline;
-  color: pi;
 }
 
 /*# sourceMappingURL=style.css.map */
