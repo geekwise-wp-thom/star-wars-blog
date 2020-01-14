@@ -69,6 +69,33 @@
     color: $grey-text;
     font-size: 15px;
   }
+  .credits {
+    display: grid;
+    grid-template-columns: auto 4fr 1fr;
+    grid-auto-rows: minmax(20px, auto);
+    background-color: blue;
+
+    .byline-author {
+      margin-top: 5px;
+      justify-self: start;
+      grid-column: 1 / span 2;
+    }
+    .byline-category {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+    .byline-date {
+      justify-self: start;
+      grid-column: 2 / 3;
+      grid-row: 2;
+    }
+    .profile-picture {
+      justify-self: end;
+      grid-column: 3;
+      grid-row: 1 / span 2;
+
+    }
+  }
   .post-info {
     color: $grey-text;
     font-size: 12px;
@@ -108,9 +135,6 @@
   }
   ul {
     padding-inline-start: unset;
-  }
-  .profile-picture {
-    width: 100px;
   }
   article {
     background-color: #2A2A2A;
