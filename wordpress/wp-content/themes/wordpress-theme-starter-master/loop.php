@@ -20,23 +20,21 @@
     <!-- /post thumbnail --> 
 
     <!-- post title -->
-    <h2 class="title">
+    <h2 class="title padding">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
     </h2>
     <!-- /post title -->
 
-    <div class="text">
+    <div class="text padding">
       <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
     </div>
 
     <div class="credits">
+
       <!-- post details -->
-
-      <span class="post-info byline-author"><?php _e( 'By:', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>      
-      <div class="post-info byline-category"><?php the_category();?></div>
+      <span class="post-info byline-author padding-left"><?php _e( 'By:', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>      
+      <div class="post-info byline-category padding-left"><?php the_category();?></div>
       <div class="post-info byline-date" >&nbsp// <?php the_time('F j, Y'); ?></div>
-      
-
         <!-- /post details -->   
         <!-- Code to use the Advanced Custom Field image -->
       <?php if( get_field('profile_picture') ): ?>
